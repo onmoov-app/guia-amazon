@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cosméticos na Amazon: Brasil e EUA | OnMoov</title>
+<meta name="description" content="Guia de apoio comercial OnMoov: o que é preciso, quanto custa e onde está a oportunidade para vender cosméticos na Amazon Brasil e na Amazon dos Estados Unidos.">
+<meta property="og:title" content="Cosméticos na Amazon: Brasil e EUA | OnMoov">
+<meta property="og:description" content="Licenças, taxas, custos, mercado e simuladores. Material de apoio comercial OnMoov.">
+<meta property="og:image" content="https://guia-amazon.onmoov.com.br/img/og.png">
+<link rel="icon" href="img/simbolo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#070d24; --navy7:#0e1840; --navy5:#18245a;
+  --pink:#e91e8c; --pinkv:#f10194; --purple:#7c30ab; --blue:#055fc2; --bluel:#3b8bea;
+  --bg:#f5f2fb; --lav:#ece6f7; --lav2:#e2d8f3; --white:#fff;
+  --ink:#141a3a; --muted:#5d6488; --muted-d:#a7b1d3; --line:#ddd5ee;
+  --ok:#16a374; --warn:#e08a1e; --bad:#d6336c;
+  --grad:linear-gradient(90deg,var(--pinkv),var(--purple) 50%,var(--blue));
+  --r:18px; --shadow:0 18px 40px -24px rgba(20,26,58,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+h1,h2,h3,h4{margin:0;line-height:1.15;font-weight:600;letter-spacing:-.015em}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.num{font-family:MuseoModerno,Poppins,sans-serif;font-weight:800;letter-spacing:-.02em}
+.gtext{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kicker{font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--pink)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--lav);color:var(--purple)}
+.tag.blue{background:#e3eefc;color:var(--blue)}
+.tag.pink{background:#fde4f1;color:#b8156c}
+.tag.warn{background:#fdf0dd;color:#9a5a0c}
+.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(7,13,36,.92);backdrop-filter:blur(10px);box-shadow:0 8px 30px -12px rgba(0,0,0,.5)}
+.nav .in{display:flex;align-items:center;gap:20px;height:64px}
+.nav .brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:MuseoModerno;font-weight:300;font-size:20px;letter-spacing:.01em}
+.nav .brand img{width:30px}
+.nav .links{display:flex;gap:6px;margin-left:auto}
+.nav .links a{color:#cdd3ec;text-decoration:none;font-size:13.5px;padding:8px 14px;border-radius:999px;transition:.2s}
+.nav .links a:hover,.nav .links a.on{background:rgba(255,255,255,.1);color:#fff}
+.progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--grad)}
+@media (max-width:760px){.nav .links .hide-m{display:none}.nav .links a{padding:7px 10px;font-size:12.5px}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:var(--navy);color:#f3f5fb;padding:120px 0 70px}
+.glow{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;pointer-events:none}
+.g1{width:520px;height:520px;background:var(--purple);top:-160px;right:-120px;animation:drift 14s ease-in-out infinite}
+.g2{width:420px;height:420px;background:var(--pinkv);bottom:-220px;left:-120px;opacity:.35;animation:drift 18s ease-in-out infinite reverse}
+.g3{width:360px;height:360px;background:var(--blue);top:40%;left:45%;opacity:.3;animation:drift 16s ease-in-out infinite}
+@keyframes drift{50%{transform:translate(40px,30px) scale(1.08)}}
+.hero .lines{position:absolute;inset:0;opacity:.18}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.hero .logo{width:170px;margin-bottom:38px}
+.hero h1{font-size:clamp(38px,5.6vw,68px);font-weight:700;margin:16px 0 18px}
+.hero h1 .gtext{display:inline-block}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);font-weight:300;color:var(--muted-d);max-width:560px}
+.hero .ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.cta{display:flex;align-items:center;gap:14px;padding:14px 20px 14px 14px;border-radius:16px;background:rgba(255,255,255,.07);color:#fff;text-decoration:none;transition:.25s;min-width:240px}
+.cta:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
+.cta .flag{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-family:MuseoModerno;font-weight:800;font-size:15px}
+.cta .flag.br{background:linear-gradient(135deg,#0b8a4a,#16a374)}
+.cta .flag.us{background:linear-gradient(135deg,var(--blue),#1c3f8f)}
+.cta small{display:block;color:var(--muted-d);font-size:12px}
+.cta b{font-weight:600;font-size:15px}
+.moovy-hero{width:min(330px,80%);margin:0 auto;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 30px 40px rgba(5,95,194,.35))}
+@keyframes float{50%{transform:translateY(-16px) rotate(-1.5deg)}}
+.statstrip{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:64px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden}
+.statstrip>div{background:var(--navy);padding:22px 22px}
+.statstrip .num{font-size:clamp(28px,3.4vw,42px);line-height:1}
+.statstrip p{font-size:13px;color:var(--muted-d);margin-top:8px}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.moovy-hero{width:200px}.statstrip{grid-template-columns:1fr 1fr}}
+
+/* ---------- SECTIONS ---------- */
+section{padding:84px 0}
+.sec-head{max-width:760px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,3.4vw,42px);margin:14px 0 14px}
+.sec-head p{color:var(--muted);font-size:17px}
+.part{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:90px 0 80px}
+.part .wrap{position:relative;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.part .pn{font-size:clamp(80px,12vw,150px);line-height:.85}
+.part h2{font-size:clamp(32px,4.4vw,54px);font-weight:700;margin:10px 0 14px}
+.part p{color:var(--muted-d);max-width:600px;font-size:17px;font-weight:300}
+.part img{width:220px;animation:float 6s ease-in-out infinite}
+@media (max-width:760px){.part .wrap{grid-template-columns:1fr}.part img{width:150px}}
+.card{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.card.lav{background:var(--lav);box-shadow:none}
+.card.navy{background:var(--navy7);color:#fff;box-shadow:none}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:900px){.grid3,.grid4{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.src{font-size:12px;color:var(--muted);margin-top:14px}
+.src a{color:var(--muted)}
+
+/* ---------- COMPARE ---------- */
+.vs{display:grid;grid-template-columns:1.1fr 1fr 1fr;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.vs>div{padding:16px 22px;border-bottom:1px solid var(--lav)}
+.vs .h{background:var(--navy);color:#fff;font-weight:600;display:flex;align-items:center;gap:10px}
+.vs .h .dot{width:10px;height:10px;border-radius:50%}
+.vs .l{color:var(--muted);font-size:14px;display:flex;align-items:center;gap:10px}
+.vs .v{font-weight:500}
+.vs .v b{font-family:MuseoModerno;font-weight:700;font-size:20px}
+.meter{display:flex;gap:4px;margin-top:6px}
+.meter i{width:22px;height:7px;border-radius:99px;background:var(--lav2)}
+.meter i.f{background:var(--grad)}
+@media (max-width:700px){.vs{grid-template-columns:1fr 1fr}.vs .l{grid-column:1/-1;background:var(--bg);padding:10px 18px}.vs .h.e{display:none}}
+
+/* ---------- PODIUM ---------- */
+.podium{display:flex;align-items:flex-end;justify-content:center;gap:14px;height:250px;margin-top:10px}
+.pod{width:31%;max-width:140px;text-align:center}
+.pod .bar{height:0;border-radius:14px 14px 4px 4px;background:var(--lav2);display:flex;align-items:flex-start;justify-content:center;padding-top:12px;font-family:MuseoModerno;font-weight:800;font-size:28px;color:var(--purple);transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.pod.br .bar{background:var(--grad);color:#fff}
+.pod span{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+.in .pod.p1 .bar{height:200px}.in .pod.p2 .bar{height:160px}.in .pod.br .bar{height:125px}
+
+/* icon arrays */
+.arr{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin:18px 0 6px}
+.arr .it{aspect-ratio:1/1.6;border-radius:8px 8px 6px 6px;background:var(--lav2);position:relative;transition:background .5s,transform .5s}
+.arr .it::before{content:"";position:absolute;left:30%;right:30%;top:-12%;height:16%;border-radius:4px 4px 0 0;background:inherit;filter:brightness(.92)}
+.arr .it.on{background:var(--pink);transform:translateY(-4px)}
+.people{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:16px 0 8px}
+.people svg{width:100%;height:auto;fill:var(--lav2);transition:fill .5s}
+.people svg.on{fill:var(--blue)}
+.people svg.half{fill:url(#halfg)}
+.bignum{font-size:clamp(40px,5vw,60px);line-height:1}
+
+/* ---------- FLOW (BR licenças) ---------- */
+.flow{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.qnode{grid-column:1/-1;justify-self:center;background:var(--navy);color:#fff;border-radius:999px;padding:14px 26px;font-weight:600;display:flex;gap:10px;align-items:center;box-shadow:var(--shadow)}
+.branch{background:#fff;border-radius:var(--r);padding:24px;box-shadow:var(--shadow);position:relative}
+.branch h3{font-size:18px;display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.branch .yn{font-family:MuseoModerno;font-weight:800;font-size:13px;padding:3px 10px;border-radius:999px;color:#fff}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:10px 0 10px 46px;border-bottom:1px dashed var(--line);counter-increment:s;opacity:0;transform:translateX(-14px);transition:.5s}
+.steps li:last-child{border:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;background:var(--lav);color:var(--pink);font-family:MuseoModerno;font-weight:800;display:grid;place-items:center;font-size:14px}
+.steps li b{font-weight:600}
+.steps li small{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+.in .steps li{opacity:1;transform:none}
+.merge{grid-column:1/-1;background:linear-gradient(135deg,var(--navy7),var(--navy));color:#fff;border-radius:var(--r);padding:26px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.merge .chips{display:flex;flex-wrap:wrap;gap:10px}
+.merge .chip{background:rgba(255,255,255,.08);border-radius:12px;padding:10px 14px;font-size:14px;display:flex;gap:8px;align-items:center}
+.connector{grid-column:1/-1;height:40px}
+.connector svg{width:100%;height:100%}
+.connector path{stroke:var(--purple);stroke-width:2;fill:none;stroke-dasharray:6 6}
+@media (max-width:760px){.flow{grid-template-columns:1fr}.merge{grid-template-columns:1fr}.connector{display:none}}
+.alert{display:flex;gap:16px;align-items:flex-start;background:#fff4f9;border-radius:var(--r);padding:20px 22px;margin-top:22px}
+.alert .ico{color:var(--pink);width:28px;height:28px}
+.alert.blue{background:#eef5ff}.alert.blue .ico{color:var(--blue)}
+.alert.amber{background:#fff6e8}.alert.amber .ico{color:var(--warn)}
+
+/* grau toggle */
+.toggle{display:inline-flex;background:var(--lav);border-radius:999px;padding:4px;gap:4px}
+.toggle button{border:0;background:transparent;font:inherit;font-size:14px;font-weight:600;padding:8px 18px;border-radius:999px;color:var(--muted);cursor:pointer;transition:.2s}
+.toggle button.on{background:#fff;color:var(--ink);box-shadow:0 4px 14px -6px rgba(20,26,58,.35)}
+.grau{display:none;margin-top:18px}.grau.on{display:block;animation:fadein .5s}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{background:var(--bg);border-radius:999px;padding:6px 12px;font-size:13.5px}
+
+/* ---------- FEES ---------- */
+.fee{display:flex;flex-direction:column;gap:6px}
+.fee .num{font-size:44px;line-height:1}
+.fee .lbl{font-weight:600}
+.ring{width:120px;height:120px;position:relative;margin-bottom:8px}
+.ring svg{transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12}
+.ring .bg{stroke:var(--lav)}
+.ring .fg{stroke:url(#ringg);stroke-linecap:round;stroke-dasharray:314;stroke-dashoffset:314;transition:stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1)}
+.ring .c{position:absolute;inset:0;display:grid;place-items:center;font-family:MuseoModerno;font-weight:800;font-size:28px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+.tier{background:var(--bg);border-radius:14px;padding:14px;text-align:center}
+.tier .num{font-size:24px}
+.tier small{display:block;color:var(--muted);font-size:12px}
+.tier .pct{font-size:12px;font-weight:600;color:var(--pink);margin-top:4px}
+
+/* ---------- CALCULATOR ---------- */
+.calc{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.calc .in-side{background:#fff;padding:30px}
+.calc .out-side{background:var(--navy);color:#fff;padding:30px;position:relative;overflow:hidden}
+.field{margin-bottom:20px}
+.field label{display:flex;justify-content:space-between;font-size:14px;font-weight:500;margin-bottom:8px}
+.field label output{font-family:MuseoModerno;font-weight:700;color:var(--purple);font-size:16px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--lav2);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid var(--pink);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:5px solid var(--pink);cursor:pointer}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{border:0;font:inherit;font-size:13px;font-weight:600;padding:8px 12px;border-radius:10px;background:var(--lav);color:var(--muted);cursor:pointer;transition:.2s}
+.seg button.on{background:var(--navy);color:#fff}
+.out-big{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.out-big .num{font-size:clamp(46px,6vw,72px);line-height:.9}
+.out-big .pc{font-family:MuseoModerno;font-weight:700;font-size:22px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.1)}
+.stack{display:flex;height:46px;border-radius:12px;overflow:hidden;margin:26px 0 18px;background:rgba(255,255,255,.06)}
+.stack div{height:100%;transition:width .6s cubic-bezier(.2,.8,.2,1);position:relative}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-size:13.5px}
+.legend div{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.legend span.k{display:flex;align-items:center;gap:8px;color:var(--muted-d)}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.legend b{font-weight:600}
+.verdict{margin-top:20px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.07);font-size:14px;display:flex;gap:10px;align-items:flex-start}
+.verdict .ico{width:20px;height:20px;margin-top:2px}
+@media (max-width:860px){.calc{grid-template-columns:1fr}}
+@media (max-width:560px){.legend{grid-template-columns:1fr}.crow{grid-template-columns:auto 1fr}.crow .v{grid-column:2;text-align:left}.calc .in-side,.calc .out-side{padding:24px}}
+.c-cost{background:#6b7399}.c-com{background:var(--pink)}.c-log{background:var(--purple)}.c-tax{background:#9b8fc0}.c-ads{background:var(--bluel)}.c-free{background:var(--ok)}.c-duty{background:#f0a23a}.c-frt{background:#5468b8}
+
+/* score */
+.score{display:grid;gap:14px}
+.srow{display:grid;grid-template-columns:200px 1fr 70px;gap:14px;align-items:center}
+.srow .trk{height:12px;background:var(--lav);border-radius:99px;overflow:hidden}
+.srow .fil{height:100%;width:0;border-radius:99px;background:var(--grad);transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+.srow .lvl{font-size:12.5px;font-weight:600;color:var(--purple);text-align:right}
+@media (max-width:600px){.srow{grid-template-columns:1fr 60px}.srow .trk{grid-column:1/-1;grid-row:2}}
+
+/* ---------- ROUTE (EUA) ---------- */
+.route{position:relative;background:var(--navy);border-radius:28px;padding:40px 30px 30px;color:#fff;overflow:hidden}
+.route .scroller{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -10px;padding:0 10px}
+.route svg.map{width:100%;min-width:760px;height:auto;display:block}
+.route .path-bg{stroke:rgba(255,255,255,.14);stroke-width:3;fill:none;stroke-dasharray:2 10;stroke-linecap:round}
+.route .path-fg{stroke:url(#routeg);stroke-width:3;fill:none;stroke-linecap:round}
+.stn circle.o{fill:var(--navy);stroke:rgba(255,255,255,.25);stroke-width:2;transition:.3s}
+.stn circle.i{fill:var(--navy7)}
+.stn.on circle.o{stroke:var(--pink);stroke-width:3}
+.stn text{fill:#fff;font-family:Poppins;font-size:13px;font-weight:600;text-anchor:middle}
+.stn text.s{fill:var(--muted-d);font-weight:400;font-size:11px}
+.stn{cursor:pointer}
+.stn .ic{stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.route-detail{margin-top:18px;background:rgba(255,255,255,.06);border-radius:18px;padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;min-height:130px}
+.route-detail .n{font-family:MuseoModerno;font-weight:800;font-size:46px;line-height:.9}
+.route-detail h4{font-size:18px;margin-bottom:6px}
+.route-detail ul{margin:8px 0 0;padding-left:18px;color:var(--muted-d);font-size:14.5px}
+.route-hint{font-size:12.5px;color:var(--muted-d);margin-top:10px;text-align:center}
+.flagline{display:flex;justify-content:space-between;font-size:12px;color:var(--muted-d);letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px;padding:0 6px}
+
+/* checklist EUA */
+.ck{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:980px){.ck{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.ck{grid-template-columns:1fr}}
+.ckcol h3{font-size:16px;display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.ckcol h3 .b{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--lav);color:var(--purple)}
+.ckitem{background:#fff;border-radius:14px;padding:14px 14px 14px 44px;margin-bottom:10px;position:relative;font-size:14px;box-shadow:0 10px 24px -20px rgba(20,26,58,.5)}
+.ckitem::before{content:"";position:absolute;left:14px;top:16px;width:18px;height:18px;border-radius:6px;background:var(--lav2);transition:.4s}
+.ckitem.done::before{background:var(--grad)}
+.ckitem.done::after{content:"";position:absolute;left:20px;top:19px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.ckitem b{display:block;font-weight:600;margin-bottom:2px}
+.ckitem small{color:var(--muted);font-size:12.5px;line-height:1.4;display:block}
+.who{display:inline-block;margin-top:6px;font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px}
+.who.cli{background:#e8f7f1;color:#0f7a56}.who.par{background:#e3eefc;color:var(--blue)}.who.onm{background:#fde4f1;color:#b8156c}
+
+/* tariff hero */
+.tariff{position:relative;background:linear-gradient(135deg,#2a0f3d,var(--navy));color:#fff;border-radius:28px;padding:38px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;overflow:hidden}
+.tariff .num{font-size:clamp(70px,10vw,130px);line-height:.85}
+.tariff .stackt{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.tariff .stackt span{background:rgba(255,255,255,.08);border-radius:10px;padding:8px 12px;font-size:13.5px}
+@media (max-width:760px){.tariff{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{position:relative;margin-top:10px;padding-left:34px}
+.tl::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:var(--lav2)}
+.tl .ev{position:relative;padding:0 0 26px}
+.tl .ev::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--purple)}
+.tl .ev.hot::before{border-color:var(--pink);background:var(--pink);box-shadow:0 0 0 6px rgba(233,30,140,.15)}
+.tl .ev .d{font-family:MuseoModerno;font-weight:700;color:var(--purple);font-size:15px}
+.tl .ev p{font-size:14.5px}
+
+/* phases */
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:10px}
+.phase{position:relative;padding:58px 18px 0 0}
+.phase::before{content:"";position:absolute;top:21px;left:0;right:0;height:3px;background:var(--lav2)}
+.phase .bar{position:absolute;top:21px;left:0;height:3px;width:0;background:var(--grad);transition:width .9s ease}
+.in .phase .bar{width:100%}
+.phase:nth-child(2) .bar{transition-delay:.5s}.phase:nth-child(3) .bar{transition-delay:1s}.phase:nth-child(4) .bar{transition-delay:1.5s}
+.phase .dot{position:absolute;top:8px;left:0;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:MuseoModerno;font-weight:800;font-size:14px;z-index:1}
+.phase h4{font-size:16px;margin-bottom:4px}
+.phase .t{font-size:12px;font-weight:600;color:var(--pink);margin-bottom:6px;letter-spacing:.04em}
+.phase p{font-size:13.5px;color:var(--muted)}
+@media (max-width:760px){.phases{grid-template-columns:1fr 1fr;row-gap:20px}}
+
+/* fixed cost list */
+.costlist{display:grid;gap:10px}
+.crow{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;background:#fff;border-radius:14px;padding:14px 18px}
+.crow .b{width:38px;height:38px;border-radius:12px;background:var(--lav);display:grid;place-items:center;color:var(--purple)}
+.crow b{font-weight:600;font-size:14.5px;display:block}
+.crow small{color:var(--muted);font-size:12.5px}
+.crow .v{font-family:MuseoModerno;font-weight:700;font-size:17px;text-align:right;white-space:nowrap}
+.crow .v small{display:block;font-family:Poppins;font-weight:400}
+
+/* scen bars */
+.scen{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;align-items:end;height:170px}
+.scen .col{display:flex;flex-direction:column;justify-content:flex-end;height:100%;text-align:center}
+.scen .b{border-radius:10px 10px 4px 4px;background:var(--ok);transition:height .7s cubic-bezier(.2,.8,.2,1);min-height:4px}
+.scen .b.neg{background:var(--bad)}
+.scen .v{font-family:MuseoModerno;font-weight:700;font-size:17px;margin-bottom:6px}
+.scen small{display:block;color:var(--muted-d);font-size:12px;margin-top:8px}
+
+/* closing */
+.close{background:var(--navy);color:#fff;padding:90px 0 40px;position:relative;overflow:hidden}
+.close .tagline{font-family:MuseoModerno;font-weight:800;font-size:clamp(36px,6vw,74px);line-height:.95;letter-spacing:-.03em}
+.close .tagline em{font-style:normal;color:var(--pink)}
+.nextlist{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.nextlist li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);padding:12px 16px;border-radius:12px;font-size:14.5px}
+.nextlist li .ico{color:var(--pink);margin-top:2px}
+.contact{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+.contact a{color:#fff;text-decoration:none;background:rgba(255,255,255,.08);padding:12px 18px;border-radius:12px;display:flex;gap:10px;align-items:center;font-size:14px}
+.contact a:hover{background:rgba(255,255,255,.15)}
+.sources{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:var(--muted-d);columns:2;column-gap:40px}
+.sources a{color:var(--muted-d)}
+.sources li{margin-bottom:6px;break-inside:avoid}
+@media (max-width:700px){.sources{columns:1}}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:40px;font-size:12px;color:var(--muted-d)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="ringg" x1="0" x2="1"><stop offset="0" stop-color="#f10194"/><stop offset=".5" stop-color="#7c30ab"/><stop offset="1" stop-color="#055fc2"/></linearGradient>
+    <linearGradient id="routeg" x1="0" x2="1"><stop offset="0" stop-color="#16a374"/><stop offset=".4" stop-color="#f10194"/><stop offset=".7" stop-color="#7c30ab"/><stop offset="1" stop-color="#3b8bea"/></linearGradient>
+    <linearGradient id="halfg" x1="0" x2="1"><stop offset=".5" stop-color="#055fc2"/><stop offset=".5" stop-color="#e2d8f3"/></linearGradient>
+  </defs>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V7l8 4v10H3z"/><path d="M7 17h2M12 17h2M17 17h1"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 15l-8-4V5a1.5 1.5 0 0 0-3 0v6l-8 4v2l8-2v4l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-4l8 2z"/></symbol>
+  <symbol id="i-customs" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v9M19 10v9M9 10v9M15 10v9M3 21h18"/></symbol>
+  <symbol id="i-warehouse" viewBox="0 0 24 24"><path d="M3 21V9l9-5 9 5v12"/><path d="M7 21v-8h10v8M7 17h10"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.5 11h11L21 8H6.5"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="8" cy="8" r="1.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/><path d="M16 8h4v4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5V8M12 16v1.5"/></symbol>
+  <symbol id="i-label" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9v11h16V9M4 9c0 1.7 1.3 3 3 3s2.7-1.3 2.7-3c0 1.7 1.2 3 2.3 3s2.3-1.3 2.3-3c0 1.7 1 3 2.7 3s3-1.3 3-3"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-1.8-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-1.8z"/></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 21c-4 0-6.5-2.6-6.5-6 0-4 4-6 4-10 2.5 1.5 4 4 4 6 1-1 1.5-2 1.5-3 2 2 3.5 4.5 3.5 7 0 3.4-2.5 6-6.5 6z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-ship" viewBox="0 0 24 24"><path d="M3 17l2 4h14l2-4H3zM5 17V9h14v8M9 9V5h6v4"/></symbol>
+  <symbol id="i-person" viewBox="0 0 20 32"><circle cx="10" cy="6" r="5"/><path d="M3 14a7 7 0 0 1 14 0v8h-3v10H6V22H3z"/></symbol>
+</svg>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap in">
+    <a class="brand" href="#topo"><img src="img/simbolo.webp" alt="">OnMoov</a>
+    <div class="links">
+      <a href="#resumo" class="hide-m">Resumo</a>
+      <a href="#brasil"><span class="hide-m">Amazon </span>Brasil</a>
+      <a href="#eua"><span class="hide-m">Amazon </span>EUA</a>
+      <a href="#fontes" class="hide-m">Fontes</a>
+    </div>
+  </div>
+  <div class="progress" id="prog"></div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="topo">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+  <svg class="lines" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 160 H520 a60 60 0 0 1 0 120 H330 a60 60 0 0 0 0 120 H900" stroke="#3b8bea" stroke-width="2" fill="none"/>
+    <path d="M200 520 H760 a50 50 0 0 0 0-100 H640" stroke="#e91e8c" stroke-width="2" fill="none"/>
+    <path d="M700 90 H1220" stroke="#7c30ab" stroke-width="2" fill="none"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <img class="logo" src="img/logo-branco.webp" alt="OnMoov Soluções em e-commerce">
+        <span class="kicker">Apoio comercial · Uso interno</span>
+        <h1>Cosméticos na <span class="gtext">Amazon</span><br>Brasil e Estados Unidos</h1>
+        <p class="lead">O que é preciso para vender, quanto custa, onde está a oportunidade e onde estão as armadilhas. Com números, simuladores e o caminho passo a passo.</p>
+        <div class="ctas">
+          <a class="cta" href="#brasil"><span class="flag br">BR</span><span><small>Parte 1</small><b>Amazon Brasil</b></span></a>
+          <a class="cta" href="#eua"><span class="flag us">US</span><span><small>Parte 2</small><b>Amazon Estados Unidos</b></span></a>
+        </div>
+      </div>
+      <img class="moovy-hero" src="img/moovy-apontando.webp" alt="Moovy, mascote da OnMoov">
+    </div>
+    <div class="statstrip">
+      <div><span class="num gtext" data-count="3" data-suffix="º">0</span><p>maior mercado de beleza do mundo, atrás de EUA e China</p></div>
+      <div><span class="num gtext" data-count="186.8" data-dec="1" data-prefix="R$ " data-suffix=" bi">0</span><p>faturamento do setor no Brasil em 2025 (+6,8%)</p></div>
+      <div><span class="num gtext" data-count="45" data-prefix="+" data-suffix="%">0</span><p>de portfólio de beleza na Amazon Brasil em 2026</p></div>
+      <div><span class="num gtext" data-count="37.5" data-dec="1" data-prefix="até " data-suffix="%">0</span><p>de sobretaxa dos EUA sobre produtos brasileiros</p></div>
+    </div>
+  </div>
+</header>
+
+<!-- RESUMO -->
+<section id="resumo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Em 30 segundos</span>
+      <h2>Mesma Amazon, dois jogos diferentes</h2>
+      <p>No Brasil, o desafio é regularização e margem. Nos Estados Unidos, entram outro órgão regulador, alfândega, logística internacional e tarifa de importação.</p>
+    </div>
+    <div class="vs reveal">
+      <div class="h e"></div>
+      <div class="h"><span class="dot" style="background:#16a374"></span>Amazon Brasil</div>
+      <div class="h"><span class="dot" style="background:#3b8bea"></span>Amazon EUA</div>
+
+      <div class="l"><svg class="ico"><use href="#i-shield"/></svg>Órgão regulador</div>
+      <div class="v">Anvisa</div>
+      <div class="v">FDA</div>
+
+      <div class="l"><svg class="ico"><use href="#i-tag"/></svg>Comissão de beleza</div>
+      <div class="v"><b>13%</b> <span class="muted small">mín. R$ 2</span></div>
+      <div class="v"><b>8% a 15%</b> <span class="muted small">conforme preço</span></div>
+
+      <div class="l"><svg class="ico"><use href="#i-store"/></svg>Plano profissional</div>
+      <div class="v"><b>R$ 19</b><span class="muted small">/mês após o 1º ano</span></div>
+      <div class="v"><b>US$ 39,99</b><span class="muted small">/mês</span></div>
+
+      <div class="l"><svg class="ico"><use href="#i-truck"/></svg>Logística</div>
+      <div class="v">DBA ou FBA, com envio do próprio estoque</div>
+      <div class="v">Estoque nos centros da Amazon (FBA)</div>
+
+      <div class="l"><svg class="ico"><use href="#i-customs"/></svg>Tarifa de entrada</div>
+      <div class="v">Não se aplica</div>
+      <div class="v"><b style="color:var(--pink)">até 37,5%</b></div>
+
+      <div class="l"><svg class="ico"><use href="#i-scale"/></svg>Complexidade <span class="tag">leitura OnMoov</span></div>
+      <div class="v"><div class="meter"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div></div>
+      <div class="v"><div class="meter"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTE 1 ================= -->
+<div class="part" id="brasil">
+  <div class="glow g1" style="background:#16a374;opacity:.25"></div>
+  <div class="wrap">
+    <div>
+      <span class="num gtext pn">01</span>
+      <h2>Amazon Brasil</h2>
+      <p>Mercado gigante, categoria prioritária para a Amazon e uma regra de ouro: produto regularizado na Anvisa antes do primeiro anúncio.</p>
+    </div>
+    <img src="img/moovy-notebook.webp" alt="">
+  </div>
+</div>
+
+<!-- 1.1 Mercado -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">1.1 · O mercado</span>
+      <h2>O Brasil está no pódio da beleza</h2>
+      <p>O setor de higiene pessoal, perfumaria e cosméticos faturou cerca de R$ 186,8 bilhões em 2025, alta de 6,8%, e passou de US$ 1 bilhão em exportações pela primeira vez.</p>
+    </div>
+    <div class="grid2">
+      <div class="card reveal" id="podium">
+        <span class="tag">Ranking mundial de beleza</span>
+        <div class="podium">
+          <div class="pod p2"><span>China</span><div class="bar">2º</div></div>
+          <div class="pod p1"><span>EUA</span><div class="bar">1º</div></div>
+          <div class="pod br"><span>Brasil</span><div class="bar">3º</div></div>
+        </div>
+        <p class="src">Fonte: ABIHPEC e Euromonitor, via Forbes (set/2026).</p>
+      </div>
+      <div class="grid2" style="gap:18px">
+        <div class="card lav reveal d1">
+          <span class="num bignum gtext" data-count="186.8" data-dec="1">0</span>
+          <p class="small"><b>R$ bilhões</b> faturados pelo setor em 2025</p>
+        </div>
+        <div class="card lav reveal d2">
+          <span class="num bignum gtext" data-count="1.061" data-dec="3" data-prefix="US$ ">0</span>
+          <p class="small"><b>bilhão</b> em exportações em 2025, recorde</p>
+        </div>
+        <div class="card lav reveal d3">
+          <span class="num bignum gtext" data-count="3675" data-sep="1">0</span>
+          <p class="small"><b>indústrias</b> do setor registradas (out/2025)</p>
+        </div>
+        <div class="card lav reveal d4">
+          <span class="num bignum gtext" data-count="100" data-suffix="%">0</span>
+          <p class="small">dos <b>domicílios</b> têm produtos do setor</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card reveal" id="bottles">
+        <span class="tag pink">Mais vendidos de beleza na Amazon Brasil</span>
+        <div class="arr" id="arr"></div>
+        <p><b class="num" style="font-size:28px">7 de 10</b> são dermocosméticos: séruns antimanchas, hidratantes com ceramidas e xampus antiqueda.</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="tag blue">Crescimento da categoria em 2026</span>
+        <div style="display:flex;gap:24px;margin:22px 0 8px">
+          <div><span class="num bignum gtext" data-count="45" data-prefix="+" data-suffix="%">0</span><p class="small muted">portfólio de beleza</p></div>
+          <div><span class="num bignum gtext" data-count="40" data-prefix="~" data-suffix="%">0</span><p class="small muted">vendas vs 2025</p></div>
+        </div>
+        <p class="small">Chegada de marcas premium e de Beleza na Web e Época Cosméticos à plataforma. A seleção de beleza asiática mais que dobrou.</p>
+      </div>
+      <div class="card reveal d2" id="ppl">
+        <span class="tag">Como o brasileiro decide</span>
+        <div class="people" id="people"></div>
+        <p><b>Quase metade</b> compra beleza guiada por recomendações na internet, o dobro do registrado nos Estados Unidos.</p>
+      </div>
+    </div>
+    <p class="src">Fontes: Amazon Brasil via Gironews, E-commerce Brasil e Trademap (set a out/2026); ABIHPEC via Forbes e O Hoje.</p>
+  </div>
+</section>
+
+<!-- 1.2 Audiência -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">1.2 · Audiência</span>
+      <h2>1 em cada 10 visitas do e-commerce brasileiro passa pela Amazon</h2>
+      <p>Em dezembro de 2025, a Amazon Brasil tinha 10,4% da audiência do e-commerce do país, atrás apenas do Mercado Livre (15,3%).</p>
+    </div>
+    <div class="grid2">
+      <div class="card lav reveal">
+        <div class="people" id="people10" style="grid-template-columns:repeat(10,1fr);max-width:420px"></div>
+        <div style="display:flex;gap:30px;margin-top:16px;flex-wrap:wrap">
+          <div><span class="num bignum" style="color:var(--blue)" data-count="10.4" data-dec="1" data-suffix="%">0</span><p class="small muted">Amazon Brasil</p></div>
+          <div><span class="num bignum" style="color:var(--muted)" data-count="15.3" data-dec="1" data-suffix="%">0</span><p class="small muted">Mercado Livre, líder</p></div>
+        </div>
+        <p class="src">Fonte: Conversion, Relatório Setores do E-commerce (dez/2025), dados SimilarWeb.</p>
+      </div>
+      <div class="reveal d1">
+        <h3 style="font-size:20px;margin-bottom:14px">Quem compra beleza na Amazon</h3>
+        <div class="costlist">
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-flask"/></svg></span><div><b>Procura ativo e resultado</b><small>Dermocosméticos lideram: antimanchas, ceramidas, antiqueda.</small></div><span></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-star"/></svg></span><div><b>Aceita pagar por marca</b><small>A Amazon trouxe marcas premium e de luxo em 2026.</small></div><span></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-chart"/></svg></span><div><b>Pesquisa antes de comprar</b><small>Avaliações, conteúdo e recomendação pesam na decisão.</small></div><span></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-clock"/></svg></span><div><b>Espera entrega rápida</b><small>Logística da Amazon e Prime puxam a conversão.</small></div><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1.3 Licenças -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">1.3 · Licenças e documentos</span>
+      <h2>O caminho muda conforme quem vende</h2>
+      <p>Quem é dono da marca ou fabrica responde pela regularização. Quem revende precisa garantir que compra produto regularizado. No fim, os dois caminhos chegam à mesma conta na Amazon.</p>
+    </div>
+    <div class="flow" id="flow">
+      <div class="qnode reveal"><svg class="ico"><use href="#i-factory"/></svg>A empresa fabrica ou é dona da marca?</div>
+      <div class="connector reveal"><svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M500 0 V14 Q500 20 494 20 H256 Q250 20 250 26 V40 M500 14 Q500 20 506 20 H744 Q750 20 750 26 V40"/></svg></div>
+      <div class="branch reveal">
+        <h3><span class="yn" style="background:var(--pink)">SIM</span>Fabricante ou dona da marca</h3>
+        <ol class="steps">
+          <li><b>CNPJ com atividade adequada</b><small>Atividade de fabricação ou importação de cosméticos.</small></li>
+          <li><b>Licença sanitária local</b><small>Emitida pela vigilância sanitária do estado ou município.</small></li>
+          <li><b>AFE na Anvisa</b><small>Autorização de Funcionamento para fabricar ou importar. Prazo de análise de até 60 dias.</small></li>
+          <li><b>Responsável técnico</b><small>Profissional habilitado que assina pela regularização.</small></li>
+          <li><b>Produto notificado ou registrado</b><small>Notificação na maioria dos casos. Alguns grupos de grau 2, como alisantes, exigem registro.</small></li>
+          <li><b>Rótulo dentro das regras</b><small>Ingredientes, lote, validade, modo de uso e advertências.</small></li>
+        </ol>
+      </div>
+      <div class="branch reveal d1">
+        <h3><span class="yn" style="background:var(--blue)">NÃO</span>Revendedor</h3>
+        <ol class="steps">
+          <li><b>Comprar de fornecedor regularizado</b><small>Com nota fiscal e marca identificada.</small></li>
+          <li><b>Conferir a regularização de cada produto</b><small>Consulta pública no site da Anvisa, antes de anunciar.</small></li>
+          <li><b>Guardar a documentação</b><small>Notas e dados do fabricante, para responder a Amazon ou a fiscalização.</small></li>
+          <li><b>Autorização da marca, quando pedida</b><small>Algumas marcas restringem a venda a revendedores autorizados.</small></li>
+        </ol>
+        <div class="alert blue" style="margin-top:16px"><svg class="ico"><use href="#i-check"/></svg><p class="small">Marca própria feita por terceiro: definir de início se a regularização fica no CNPJ do fabricante ou da marca.</p></div>
+      </div>
+      <div class="connector reveal"><svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M250 0 V14 Q250 20 256 20 H494 Q500 20 500 26 V40 M750 0 V14 Q750 20 744 20 H506 Q500 20 500 26"/></svg></div>
+      <div class="merge reveal">
+        <img src="img/moovy-joinha.webp" alt="" style="width:90px">
+        <div>
+          <h3 style="font-size:19px;margin-bottom:12px">Na Amazon, para os dois</h3>
+          <div class="chips">
+            <span class="chip"><svg class="ico"><use href="#i-store"/></svg>Conta de vendedor com CNPJ</span>
+            <span class="chip"><svg class="ico"><use href="#i-shield"/></svg>Aprovação em subcategorias restritas</span>
+            <span class="chip"><svg class="ico"><use href="#i-tag"/></svg>Registro de Marca na Amazon, com marca no INPI</span>
+            <span class="chip"><svg class="ico"><use href="#i-doc"/></svg>Documentos do produto à mão</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert reveal">
+      <svg class="ico"><use href="#i-alert"/></svg>
+      <div><b>Risco real:</b> a Anvisa autua quem anuncia ou vende cosmético sem notificação ou registro, inclusive em marketplaces, e classifica a infração como de risco sanitário alto. <span class="muted small">Fonte: decisões da Anvisa publicadas na Biblioteca Digital.</span></div>
+    </div>
+
+    <div class="card reveal" style="margin-top:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+        <h3 style="font-size:20px">Grau 1 ou grau 2?</h3>
+        <div class="toggle" data-toggle="grau"><button class="on" data-t="g1">Grau 1</button><button data-t="g2">Grau 2</button></div>
+      </div>
+      <div class="grau on" id="g1">
+        <p>Produtos com propriedades básicas, sem exigir comprovação inicial de alegações específicas. Regularização mais simples, por notificação.</p>
+        <div class="pills"><span class="pill">Sabonete comum</span><span class="pill">Xampu e condicionador sem alegação especial</span><span class="pill">Hidratante corporal básico</span><span class="pill">Maquiagem sem fotoproteção</span><span class="pill">Perfume</span></div>
+      </div>
+      <div class="grau" id="g2">
+        <p>Produtos com indicações específicas, que exigem comprovação de segurança e eficácia. Parte deles exige registro, não só notificação.</p>
+        <div class="pills"><span class="pill">Protetor solar</span><span class="pill">Alisante (registro)</span><span class="pill">Antiqueda e anticaspa</span><span class="pill">Clareador de manchas</span><span class="pill">Produtos infantis</span><span class="pill">Repelente</span></div>
+      </div>
+      <p class="src">Regra de referência: RDC 907/2024 da Anvisa, que substituiu a RDC 752/2022. Exemplos ilustrativos: o enquadramento final é do responsável técnico.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 1.4 Taxas -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">1.4 · Taxas da Amazon Brasil</span>
+      <h2>Quanto a Amazon cobra em cada venda</h2>
+      <p>Comissão por categoria, sobre o valor total da venda, mais a tarifa de logística. O plano profissional é grátis no primeiro ano para vendedor novo.</p>
+    </div>
+    <div class="grid3">
+      <div class="card lav reveal fee">
+        <div class="ring" data-ring="13"><svg viewBox="0 0 120 120" width="120" height="120"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50"/></svg><span class="c gtext">13%</span></div>
+        <span class="lbl">Comissão em Beleza</span>
+        <p class="small muted">Mínimo de R$ 2 por item. Beleza de luxo: 14%. Saúde e cuidados pessoais: 12%, mínimo R$ 1.</p>
+      </div>
+      <div class="card lav reveal d1 fee">
+        <span class="num gtext" style="margin:24px 0 18px">R$ 0</span>
+        <span class="lbl">Plano profissional no 1º ano</span>
+        <p class="small muted">Depois, R$ 19 por mês. É o plano que libera anúncios patrocinados e ferramentas de marca.</p>
+      </div>
+      <div class="card lav reveal d2 fee">
+        <span class="num gtext" style="margin:24px 0 18px">R$ 10,05</span>
+        <span class="lbl">FBA a partir de, por unidade</span>
+        <p class="small muted">Faixa de 0 a 100 g e preço abaixo de R$ 30. Armazenagem de R$ 75 por m³ e R$ 525 por m³ acima de 365 dias.</p>
+      </div>
+    </div>
+    <div class="card reveal" style="margin-top:22px">
+      <h3 style="font-size:19px;margin-bottom:4px">DBA: a tarifa de entrega muda com o preço do produto</h3>
+      <p class="small muted">Valores de referência por unidade vendida. O valor final varia com o estado de origem e o peso.</p>
+      <div class="tiers">
+        <div class="tier"><small>abaixo de R$ 30</small><span class="num gtext">R$ 4,50</span><div class="pct">≈ 15% de um item de R$ 29,90</div></div>
+        <div class="tier"><small>R$ 30 a R$ 49,99</small><span class="num gtext">R$ 6,50</span><div class="pct">≈ 16% de um item de R$ 39,90</div></div>
+        <div class="tier"><small>R$ 50 a R$ 78,99</small><span class="num gtext">R$ 6,75</span><div class="pct">≈ 11% de um item de R$ 59,90</div></div>
+      </div>
+      <div class="alert amber" style="margin-top:18px"><svg class="ico"><use href="#i-chart"/></svg><p class="small"><b>Ticket médio importa.</b> A tarifa de entrega é quase fixa, então pesa muito em item barato. Kits e tamanhos maiores sobem o ticket e diluem a tarifa. Para comparar: o ticket médio do e-commerce D2C brasileiro foi de R$ 285 em outubro de 2026 (Nuvemshop), e o do e-commerce em geral caiu 13,3% no 1º semestre (Neotrust).</p></div>
+      <p class="src">Fonte: <a href="https://venda.amazon.com.br/precos" target="_blank" rel="noopener">venda.amazon.com.br/precos</a> (consultado em nov/2026). Tarifas FBA atualizadas em 01/08/2025.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 1.5 Calculadora BR -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">1.5 · Simulador</span>
+      <h2>Quanto sobra de uma venda na Amazon Brasil</h2>
+      <p>Mexa nos controles. A simulação usa comissão da categoria e a tarifa DBA de referência para produtos até R$ 78,99.</p>
+    </div>
+    <div class="calc reveal" id="calcBR">
+      <div class="in-side">
+        <div class="field"><label>Categoria</label>
+          <div class="seg" data-name="cat"><button class="on" data-v="beleza">Beleza 13%</button><button data-v="luxo">Beleza de luxo 14%</button><button data-v="saude">Saúde e cuidados 12%</button></div>
+        </div>
+        <div class="field"><label for="brP">Preço de venda <output id="brPo"></output></label><input type="range" id="brP" min="19.9" max="78.9" step="1" value="49.9"></div>
+        <div class="field"><label for="brC">Custo do produto <output id="brCo"></output></label><input type="range" id="brC" min="10" max="60" step="1" value="30"></div>
+        <div class="field"><label for="brT">Impostos sobre a venda <output id="brTo"></output></label><input type="range" id="brT" min="0" max="20" step="0.5" value="8"></div>
+        <div class="field"><label for="brA">Investimento em anúncios <output id="brAo"></output></label><input type="range" id="brA" min="0" max="15" step="0.5" value="5"></div>
+        <p class="small muted">Custo, impostos e anúncios em % do preço. Referência OnMoov para conta nova: anúncios entre 3% e 8% do preço.</p>
+      </div>
+      <div class="out-side">
+        <div class="glow" style="width:300px;height:300px;background:var(--purple);right:-100px;top:-120px;opacity:.4"></div>
+        <span class="kicker">Sobra por venda</span>
+        <div class="out-big" style="margin-top:12px"><span class="num" id="brOut">R$ 0</span><span class="pc" id="brPct">0%</span></div>
+        <div class="stack" id="brStack"></div>
+        <div class="legend" id="brLeg"></div>
+        <div class="verdict" id="brVer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1.6 Viabilidade -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">1.6 · Viabilidade</span>
+      <h2>Vale a pena? Na maioria dos casos, sim, com três condições</h2>
+      <p>Leitura OnMoov da categoria de cosméticos na Amazon Brasil, com base nos dados acima e na nossa experiência com operações de marketplace.</p>
+    </div>
+    <div class="grid2" style="align-items:center">
+      <div class="score reveal" id="score">
+        <div class="srow"><b>Demanda</b><div class="trk"><div class="fil" data-w="95"></div></div><span class="lvl">Muito alta</span></div>
+        <div class="srow"><b>Crescimento na Amazon</b><div class="trk"><div class="fil" data-w="90"></div></div><span class="lvl">Muito alto</span></div>
+        <div class="srow"><b>Concorrência</b><div class="trk"><div class="fil" data-w="80"></div></div><span class="lvl">Alta</span></div>
+        <div class="srow"><b>Barreira regulatória</b><div class="trk"><div class="fil" data-w="60"></div></div><span class="lvl">Média</span></div>
+        <div class="srow"><b>Peso das tarifas</b><div class="trk"><div class="fil" data-w="55"></div></div><span class="lvl">Médio</span></div>
+      </div>
+      <div class="card navy reveal d1">
+        <h3 style="font-size:19px;margin-bottom:14px">Entrar faz sentido quando</h3>
+        <ul class="nextlist" style="margin:0">
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Todos os produtos estão regularizados na Anvisa, com documentação à mão.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>O preço comporta comissão, entrega e anúncios, de 25% a 35% do valor, e ainda deixa margem.</span></li>
+          <li><svg class="ico"><use href="#i-check"/></svg><span>Há um diferencial claro: ativo, nicho, kit ou marca com conteúdo forte.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTE 2 ================= -->
+<div class="part" id="eua">
+  <div class="glow g1" style="background:var(--blue);opacity:.35"></div>
+  <div class="wrap">
+    <div>
+      <span class="num gtext pn">02</span>
+      <h2>Amazon Estados Unidos</h2>
+      <p>Dá para vender com a conta e o CNPJ brasileiros. O produto precisa cumprir as regras da FDA, atravessar a alfândega e chegar ao estoque da Amazon antes da primeira venda.</p>
+    </div>
+    <img src="img/moovy-pensando.webp" alt="" style="width:170px">
+  </div>
+</div>
+
+<!-- 2.1 Tarifa -->
+<section>
+  <div class="wrap">
+    <div class="tariff reveal">
+      <div class="glow" style="width:360px;height:360px;background:var(--pinkv);right:-120px;bottom:-160px;opacity:.35"></div>
+      <div><span class="num gtext" data-count="37.5" data-dec="1" data-suffix="%">0</span></div>
+      <div style="position:relative">
+        <span class="kicker">O ponto de atenção nº 1</span>
+        <h2 style="font-size:clamp(24px,3vw,34px);margin:12px 0 10px">Sobretaxa máxima sobre produtos brasileiros nos EUA</h2>
+        <p style="color:var(--muted-d)">A cobrança incide sobre o valor declarado na importação, não sobre o preço de venda na Amazon. Cosmético quase certamente paga, mas a confirmação é feita pelo código fiscal de cada produto.</p>
+        <div class="stackt"><span>25% · Seção 301, desde 22/07/2026</span><span>+ 12,5% · investigação de trabalho forçado, com exceções</span></div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:30px;align-items:start">
+      <div class="reveal">
+        <h3 style="font-size:20px;margin-bottom:18px">Como chegamos até aqui</h3>
+        <div class="tl">
+          <div class="ev"><span class="d">fev/2026</span><p>Suprema Corte dos EUA derruba a tarifa de 50% baseada na lei IEEPA.</p></div>
+          <div class="ev"><span class="d">22/07/2026</span><p>Entra em vigor a sobretaxa de 25% da Seção 301 sobre parte dos produtos brasileiros.</p></div>
+          <div class="ev"><span class="d">24/07/2026</span><p>Nova sobretaxa de 12,5% por alegações de trabalho forçado, com lista de isenções.</p></div>
+          <div class="ev"><span class="d">set/2026</span><p>Brasil e EUA retomam negociação, sem acordo.</p></div>
+          <div class="ev hot"><span class="d">24/11/2026</span><p>Brasil pede painel na OMC, os EUA vetam a abertura imediata. Novo pedido pode vir em dezembro.</p></div>
+        </div>
+      </div>
+      <div class="card lav reveal d1">
+                <h3 style="font-size:19px;margin-bottom:10px">O que isso significa na prática</h3>
+        <p class="small">Como a sobretaxa é calculada sobre o custo declarado, o impacto depende da relação entre custo e preço. Em cosmético de custo baixo e preço alto, ela pesa menos do que o número assusta. Em produto de margem apertada, pode inviabilizar.</p>
+        <p class="small" style="margin-top:10px">Por isso, o primeiro passo é um <b>estudo de viabilidade por produto</b>. O simulador abaixo mostra a lógica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2.2 Rota -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">2.1 · A rota do produto</span>
+      <h2>Do Brasil ao cliente americano, em 6 paradas</h2>
+      <p>Toque em cada parada para ver o que acontece nela.</p>
+    </div>
+    <div class="route reveal" id="route">
+      <div class="flagline"><span>Brasil</span><span>Estados Unidos</span></div>
+      <div class="scroller"><svg class="map" viewBox="0 0 1000 230" id="routeSvg">
+        <path class="path-bg" d="M70 150 C 160 150, 170 70, 250 70 S 360 150, 420 150 S 540 70, 590 70 S 700 150, 760 150 S 860 70, 930 70"/>
+        <path class="path-fg" id="routeFg" d="M70 150 C 160 150, 170 70, 250 70 S 360 150, 420 150 S 540 70, 590 70 S 700 150, 760 150 S 860 70, 930 70"/>
+        <g id="planeG"><circle r="16" fill="#e91e8c"/><g transform="translate(-10 -10) scale(.84)"><use href="#i-plane" width="24" height="24" style="stroke:#fff;fill:none;stroke-width:1.8"/></g></g>
+        <g class="stn" data-i="0" transform="translate(70 150)"><circle class="o" r="30"/><circle class="i" r="22"/><use href="#i-factory" x="-11" y="-11" width="22" height="22" class="ic"/><text y="56">Fábrica</text><text class="s" y="72">Brasil</text></g>
+        <g class="stn" data-i="1" transform="translate(250 70)"><circle class="o" r="30"/><circle class="i" r="22"/><use href="#i-doc" x="-11" y="-11" width="22" height="22" class="ic"/><text y="-44">Exportação</text></g>
+        <g class="stn" data-i="2" transform="translate(420 150)"><circle class="o" r="30"/><circle class="i" r="22"/><use href="#i-ship" x="-11" y="-11" width="22" height="22" class="ic"/><text y="56">Frete</text><text class="s" y="72">aéreo ou marítimo</text></g>
+        <g class="stn" data-i="3" transform="translate(590 70)"><circle class="o" r="30"/><circle class="i" r="22"/><use href="#i-customs" x="-11" y="-11" width="22" height="22" class="ic"/><text y="-44">Alfândega EUA</text></g>
+        <g class="stn" data-i="4" transform="translate(760 150)"><circle class="o" r="30"/><circle class="i" r="22"/><use href="#i-warehouse" x="-11" y="-11" width="22" height="22" class="ic"/><text y="56">Centro Amazon</text><text class="s" y="72">FBA</text></g>
+        <g class="stn" data-i="5" transform="translate(930 70)"><circle class="o" r="30"/><circle class="i" r="22"/><use href="#i-user" x="-11" y="-11" width="22" height="22" class="ic"/><text y="-44">Cliente</text></g>
+      </svg></div>
+      <div class="route-detail" id="routeDetail"></div>
+      <p class="route-hint">A animação percorre a rota sozinha. Toque numa parada para fixar. No celular, arraste o mapa para o lado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2.3 Burocracia -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">2.2 · Burocracia</span>
+      <h2>O checklist completo, em quatro frentes</h2>
+      <p>Nenhum item é exótico, mas todos precisam estar resolvidos antes do primeiro embarque. A etiqueta mostra quem costuma cuidar de cada um.</p>
+    </div>
+    <div class="ck" id="ck">
+      <div class="ckcol reveal">
+        <h3><span class="b"><svg class="ico"><use href="#i-factory"/></svg></span>No Brasil</h3>
+        <div class="ckitem"><b>Habilitação para exportar</b><small>Radar e cadastro no Siscomex.</small><span class="who par">Despachante</span></div>
+        <div class="ckitem"><b>Documentos de exportação</b><small>Nota fiscal de exportação e DU-E.</small><span class="who par">Despachante</span></div>
+        <div class="ckitem"><b>Certificado de Venda Livre</b><small>Emitido pela Anvisa de forma eletrônica, quando pedido.</small><span class="who cli">Cliente</span></div>
+      </div>
+      <div class="ckcol reveal d1">
+        <h3><span class="b"><svg class="ico"><use href="#i-shield"/></svg></span>Na FDA</h3>
+        <div class="ckitem"><b>Registro da fábrica</b><small>Toda fábrica que produz cosmético vendido nos EUA, inclusive estrangeira.</small><span class="who par">Consultoria FDA</span></div>
+        <div class="ckitem"><b>Agente nos EUA</b><small>Obrigatório para fábrica estrangeira.</small><span class="who par">Consultoria FDA</span></div>
+        <div class="ckitem"><b>Listagem de cada produto</b><small>Com ingredientes, atualizada todo ano.</small><span class="who par">Consultoria FDA</span></div>
+        <div class="ckitem"><b>Segurança comprovada</b><small>Registros que sustentem a segurança de cada fórmula.</small><span class="who cli">Cliente</span></div>
+        <div class="ckitem"><b>Rótulo em inglês</b><small>Ingredientes INCI, conteúdo em ml e oz, contato nos EUA.</small><span class="who cli">Cliente</span></div>
+      </div>
+      <div class="ckcol reveal d2">
+        <h3><span class="b"><svg class="ico"><use href="#i-customs"/></svg></span>Na alfândega</h3>
+        <div class="ckitem"><b>Importador responsável</b><small>A Amazon não assume esse papel. Estrangeiro pode ser, com o formulário CBP 5106.</small><span class="who par">Despachante EUA</span></div>
+        <div class="ckitem"><b>Garantia aduaneira</b><small>Customs bond, avulso ou anual.</small><span class="who par">Despachante EUA</span></div>
+        <div class="ckitem"><b>Despacho de entrada</b><small>Classificação fiscal, sobretaxa e liberação.</small><span class="who par">Despachante EUA</span></div>
+      </div>
+      <div class="ckcol reveal d3">
+        <h3><span class="b"><svg class="ico"><use href="#i-cart"/></svg></span>Na Amazon</h3>
+        <div class="ckitem"><b>Venda internacional ativa</b><small>Conta brasileira unificada para EUA, Canadá e México.</small><span class="who onm">OnMoov</span></div>
+        <div class="ckitem"><b>Aprovação de categoria</b><small>Algumas subcategorias de beleza pedem documentos.</small><span class="who onm">OnMoov</span></div>
+        <div class="ckitem"><b>Marca nos EUA</b><small>Registro no USPTO ou pedido via IP Accelerator libera o Brand Registry.</small><span class="who par">Advogado de marca</span></div>
+        <div class="ckitem"><b>Anúncios em inglês e Ads</b><small>Conteúdo, A+, lançamento e mídia.</small><span class="who onm">OnMoov</span></div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:6px">
+      <div class="alert reveal"><svg class="ico"><use href="#i-sun"/></svg><div><b>Cosmético no Brasil, medicamento nos EUA.</b> Protetor solar, antitranspirante, anticaspa e antiacne são tratados como medicamento OTC pela FDA, com exigências bem maiores.</div></div>
+      <div class="alert amber reveal d1"><svg class="ico"><use href="#i-fire"/></svg><div><b>Carga perigosa.</b> Perfumes, esmaltes e aerossóis seguem regras especiais no transporte e no programa de produtos perigosos do FBA.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2.4 Custos -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">2.3 · Custos</span>
+      <h2>O que se paga para entrar e o que se paga a cada venda</h2>
+      <p>Valores de referência de mercado em novembro de 2026. Serviços de terceiros variam por fornecedor e volume.</p>
+    </div>
+    <div class="grid2">
+      <div class="reveal">
+        <h3 style="font-size:18px;margin-bottom:14px;display:flex;gap:10px;align-items:center"><span class="tag blue">Estrutura</span>Custos de entrada e fixos</h3>
+        <div class="costlist">
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-store"/></svg></span><div><b>Plano profissional Amazon</b><small>Libera anúncios patrocinados e Buy Box</small></div><span class="v">US$ 39,99<small>por mês</small></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Registro FDA e agente nos EUA</b><small>Via consultoria especializada</small></div><span class="v">a partir de US$ 100<small>+ anuidade do agente</small></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-doc"/></svg></span><div><b>Customs bond</b><small>Avulso por embarque ou contínuo anual</small></div><span class="v">US$ 50 a 600<small>avulso ou anual</small></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-customs"/></svg></span><div><b>Despachante nos EUA</b><small>Por entrada de carga. Marítimo soma o ISF, de US$ 30 a 75</small></div><span class="v">US$ 100 a 250<small>por entrada</small></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-tag"/></svg></span><div><b>Registro de marca no USPTO</b><small>Taxa oficial por classe mais honorários</small></div><span class="v">sob cotação</span></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <h3 style="font-size:18px;margin-bottom:14px;display:flex;gap:10px;align-items:center"><span class="tag pink">Por venda</span>Custos variáveis</h3>
+        <div class="costlist">
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-tag"/></svg></span><div><b>Comissão Beleza</b><small>8% até US$ 10, 15% acima. Mínimo de US$ 0,30</small></div><span class="v">8% a 15%</span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-warehouse"/></svg></span><div><b>Tarifa FBA, item pequeno</b><small>Produto de US$ 10 a 50, de 2 a 16 oz</small></div><span class="v">US$ 3,65 a 4,00<small>por unidade</small></span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Armazenagem FBA</b><small>Por pé cúbico ao mês. Mais cara de outubro a dezembro</small></div><span class="v">US$ 0,78 a 2,40</span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-customs"/></svg></span><div><b>Sobretaxa de importação</b><small>Sobre o valor declarado do produto</small></div><span class="v" style="color:var(--pink)">25% a 37,5%</span></div>
+          <div class="crow"><span class="b"><svg class="ico"><use href="#i-plane"/></svg></span><div><b>Frete internacional</b><small>Depende de peso, volume e modal</small></div><span class="v">sob cotação</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="src reveal">Fontes: Amazon Seller Central e guias de tarifas 2026 (Feedvisor, Repricer); i3CGlobal; Exfreight, BorderBuddy e Strix para bond e despacho.</p>
+  </div>
+</section>
+
+<!-- 2.5 Simulador EUA -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">2.4 · Simulador</span>
+      <h2>Para onde vai cada dólar de uma venda nos EUA</h2>
+      <p>Exemplo de partida: creme facial de 50 ml, vendido a US$ 24,90, com custo de R$ 18 por unidade. Ajuste para o produto do cliente.</p>
+    </div>
+    <div class="calc reveal" id="calcUS">
+      <div class="in-side">
+        <div class="field"><label for="usP">Preço na Amazon <output id="usPo"></output></label><input type="range" id="usP" min="7.9" max="59.9" step="1" value="24.9"></div>
+        <div class="field"><label for="usC">Custo do produto <output id="usCo"></output></label><input type="range" id="usC" min="5" max="80" step="1" value="18"></div>
+        <div class="field"><label for="usF">Frete internacional por unidade <output id="usFo"></output></label><input type="range" id="usF" min="0.3" max="5" step="0.1" value="1.5"></div>
+        <div class="field"><label for="usA">Anúncios <output id="usAo"></output></label><input type="range" id="usA" min="0" max="25" step="1" value="10"></div>
+        <div class="field"><label>Sobretaxa de importação</label>
+          <div class="seg" data-name="tar"><button data-v="0">0%</button><button data-v="25">25%</button><button class="on" data-v="37.5">37,5%</button></div>
+        </div>
+        <p class="small muted">Premissas: câmbio R$ 5,80, tarifa FBA de US$ 3,86, taxa aduaneira de 0,35% e frete como estimativa. Não inclui custos fixos nem impostos sobre o lucro.</p>
+      </div>
+      <div class="out-side">
+        <div class="glow" style="width:300px;height:300px;background:var(--blue);right:-100px;top:-120px;opacity:.45"></div>
+        <span class="kicker">Sobra por venda</span>
+        <div class="out-big" style="margin-top:12px"><span class="num" id="usOut">US$ 0</span><span class="pc" id="usPct">0%</span></div>
+        <div class="stack" id="usStack"></div>
+        <div class="legend" id="usLeg"></div>
+        <p class="small" style="margin-top:22px;color:var(--muted-d)">Mesma venda nos três cenários de tarifa:</p>
+        <div class="scen" id="usScen"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2.6 Caminho -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">2.5 · Como conduzimos</span>
+      <h2>Quatro etapas, com decisão baseada em números</h2>
+      <p>A OnMoov conduz o projeto de ponta a ponta e coordena parceiros especializados em regularização nos EUA, comércio exterior e logística internacional.</p>
+    </div>
+    <div class="phases reveal" id="phases">
+      <div class="phase"><span class="bar"></span><span class="dot">1</span><div class="t">2 A 3 SEMANAS</div><h4>Viabilidade</h4><p>Produtos, código fiscal e tarifa de cada um, custo até o estoque e preço da concorrência. Sai a decisão de seguir ou não.</p></div>
+      <div class="phase"><span class="bar"></span><span class="dot">2</span><div class="t">PREPARAÇÃO</div><h4>Estrutura</h4><p>Marca, FDA, rótulos, aprovações na Amazon e parceiro logístico.</p></div>
+      <div class="phase"><span class="bar"></span><span class="dot">3</span><div class="t">PILOTO</div><h4>Primeiro lote</h4><p>3 a 5 produtos de maior potencial, anúncios em inglês e mídia.</p></div>
+      <div class="phase"><span class="bar"></span><span class="dot">4</span><div class="t">ESCALA</div><h4>Ampliação</h4><p>Mais produtos com base nos resultados do piloto.</p></div>
+    </div>
+    <h3 class="reveal" style="font-size:19px;margin:54px 0 16px">Se a tarifa não fechar a conta</h3>
+    <div class="grid3">
+      <div class="card lav reveal"><svg class="ico" style="width:30px;height:30px;color:var(--purple)"><use href="#i-factory"/></svg><h4 style="font-size:17px;margin:12px 0 6px">Fabricar nos EUA</h4><p class="small muted">Fabricante terceirizado local evita a sobretaxa. As regras da FDA continuam valendo.</p></div>
+      <div class="card lav reveal d1"><svg class="ico" style="width:30px;height:30px;color:var(--purple)"><use href="#i-globe"/></svg><h4 style="font-size:17px;margin:12px 0 6px">Começar pelo México</h4><p class="small muted">Mesma conta unificada da Amazon na América do Norte, sem a sobretaxa americana.</p></div>
+      <div class="card lav reveal d2"><svg class="ico" style="width:30px;height:30px;color:var(--purple)"><use href="#i-globe"/></svg><h4 style="font-size:17px;margin:12px 0 6px">Ir para a Europa</h4><p class="small muted">Amazon da Europa, com regulação própria de cosméticos e representante local.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<footer class="close" id="fontes">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap" style="position:relative">
+    <div class="grid2" style="align-items:center">
+      <div>
+        <span class="kicker">Próximos passos com o cliente</span>
+        <ul class="nextlist">
+          <li><svg class="ico"><use href="#i-check"/></svg>Lista dos produtos candidatos, com custo, peso e dimensões</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Lista de ingredientes e laudos de cada produto</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Situação da regularização na Anvisa e do registro da marca</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Fabricação própria ou terceirizada</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Expectativa de investimento e de prazo</li>
+        </ul>
+      </div>
+      <div style="text-align:center"><img src="img/moovy-celebra.webp" alt="" style="width:230px;margin:0 auto;animation:float 5s ease-in-out infinite"></div>
+    </div>
+    <p class="tagline" style="margin-top:60px">Do <em>SEU</em> balcão,<br>pro Brasil!</p>
+    <div class="contact">
+      <a href="https://wa.me/5511972316761" target="_blank" rel="noopener"><svg class="ico"><use href="#i-whats"/></svg>Jô Lenotti · (11) 97231-6761</a>
+      <a href="https://www.onmoov.com.br" target="_blank" rel="noopener"><svg class="ico"><use href="#i-web"/></svg>onmoov.com.br</a>
+      <a href="https://instagram.com/onmoovbr" target="_blank" rel="noopener"><svg class="ico"><use href="#i-star"/></svg>@onmoovbr</a>
+    </div>
+    <ol class="sources">
+      <li><a href="https://forbes.com.br/forbes-money/2026/09/mercado-de-beleza-no-brasil-crescimento-investimentos/" target="_blank" rel="noopener">Forbes Brasil: mercado de beleza no Brasil (set/2026)</a></li>
+      <li><a href="https://gironews.com/varejo-digital/amazon-amplia-portfolio-de-beleza-em-45/" target="_blank" rel="noopener">Gironews: Amazon amplia portfólio de beleza em 45%</a></li>
+      <li><a href="https://www.ecommercebrasil.com.br/noticias/por-que-a-amazon-esta-investindo-em-beleza-premium-e-k-beauty-no-brasil" target="_blank" rel="noopener">E-commerce Brasil: beleza premium e K-beauty na Amazon</a></li>
+      <li><a href="https://trademap.com.br/noticias/news-8296663" target="_blank" rel="noopener">Trademap: Amazon e o mercado de beleza</a></li>
+      <li><a href="https://www.conversion.com.br/wp-content/uploads/2025/12/Dezembro-25-Relatorio-Setores-do-E-commerce-no-Brasil.pdf" target="_blank" rel="noopener">Conversion: Relatório Setores do E-commerce (dez/2025)</a></li>
+      <li><a href="https://venda.amazon.com.br/precos" target="_blank" rel="noopener">Amazon Brasil: preços para vendedores</a></li>
+      <li><a href="https://www.nuvemshop.com.br/radar-ecommerce-d2c/2026/outubro" target="_blank" rel="noopener">Nuvemshop: Radar do E-commerce D2C (out/2026)</a></li>
+      <li><a href="https://www.meioemensagem.com.br/marketing/e-commerce-brasileiro-fatura-r-2084-bilhoes-no-1o-semestre" target="_blank" rel="noopener">Meio &amp; Mensagem: e-commerce no 1º semestre de 2026 (Neotrust)</a></li>
+      <li><a href="https://www.gov.br/pt-br/servicos/solicitar-autorizacao-de-funcionamento-2013-cosmeticos" target="_blank" rel="noopener">Gov.br: AFE para cosméticos</a></li>
+      <li><a href="https://antigo.anvisa.gov.br/documents/10181/6856654/RDC_907_2024_.pdf/2016b944-8f47-4273-b152-b58dd76b67dc" target="_blank" rel="noopener">Anvisa: RDC 907/2024</a></li>
+      <li><a href="https://bibliotecadigital.anvisa.gov.br/jspui/bitstream/anvisa/19743/1/SEI_3476022_Decisao.pdf" target="_blank" rel="noopener">Anvisa: decisão sobre anúncio sem regularização em marketplace</a></li>
+      <li><a href="https://www.fda.gov/cosmetics/registration-listing-cosmetic-product-facilities-and-products" target="_blank" rel="noopener">FDA: registro de fábricas e listagem de produtos</a></li>
+      <li><a href="https://sellercentral.amazon.com/gp/help/external/200280280" target="_blank" rel="noopener">Amazon: importador responsável no FBA</a></li>
+      <li><a href="https://sellercentral.amazon.com/gp/help/external/ASFW4BD897LNTNN" target="_blank" rel="noopener">Amazon Global Logistics: importador e alfândega</a></li>
+      <li><a href="https://www.repricer.com/?p=1593" target="_blank" rel="noopener">Repricer: tarifas da Amazon EUA em 2026</a></li>
+      <li><a href="https://feedvisor.com/university//Fee_schedule" target="_blank" rel="noopener">Feedvisor: tabela FBA 2026</a></li>
+      <li><a href="https://www.i3cglobal.com/fda-cosmetic-facility-registration-and-listing-fee" target="_blank" rel="noopener">i3CGlobal: custo de registro FDA</a></li>
+      <li><a href="https://www.exfreight.com/customs-bonds-single-entry-vs-continuous-bond-guide/" target="_blank" rel="noopener">Exfreight: custo de customs bond</a></li>
+      <li><a href="https://strixsmart.com/resources/blog/customs-broker-cost" target="_blank" rel="noopener">Strix: custo de despachante nos EUA</a></li>
+      <li><a href="https://agenciagov.ebc.com.br/noticias/202607/alcance-das-medidas-tarifarias-dos-estados-unidos-sobre-exportacoes-brasileiras" target="_blank" rel="noopener">Agência Gov: medidas tarifárias dos EUA</a></li>
+      <li><a href="https://www.thomsonreuters.com.br/pt/tax-accounting/comercio-exterior/blog/tarifa-25-eua-produtos-brasileiros-comercio-exterior-2026.html" target="_blank" rel="noopener">Thomson Reuters: tarifa de 25% e decisão da Suprema Corte</a></li>
+      <li><a href="https://www.diariodepernambuco.com.br/brasil/2026/11/11729819-brasil-pede-analise-de-tarifaco-a-omc-mas-eua-veta.html" target="_blank" rel="noopener">Diario de Pernambuco: pedido do Brasil na OMC (24/11/2026)</a></li>
+    </ol>
+    <div class="foot"><span>Material de apoio comercial OnMoov · valores de referência em novembro de 2026. Tarifas mudam: confirme no Seller Central antes de fechar proposta.</span><span>OnMoov · Soluções em e-commerce</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const brl=v=>'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const usd=v=>'US$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const pct=v=>v.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
+
+  /* nav + progress */
+  const nav=$('#nav'),prog=$('#prog');
+  const links=$$('.nav .links a');
+  function onScroll(){
+    const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    nav.classList.toggle('solid',y>40);
+    prog.style.width=(y/h*100)+'%';
+    let cur='';['resumo','brasil','eua','fontes'].forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<120)cur=id});
+    links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* count up */
+  function countUp(el){
+    const end=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
+    const t0=performance.now(),dur=1600;
+    function f(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3),v=end*e;
+      el.textContent=pre+v.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;
+      if(p<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f);
+  }
+
+  /* icon arrays */
+  const arr=$('#arr');for(let i=0;i<10;i++){const d=document.createElement('div');d.className='it';arr.appendChild(d)}
+  const person='<svg viewBox="0 0 20 32"><use href="#i-person"/></svg>';
+  const ppl=$('#people');for(let i=0;i<10;i++)ppl.insertAdjacentHTML('beforeend',person);
+  const ppl10=$('#people10');for(let i=0;i<10;i++)ppl10.insertAdjacentHTML('beforeend',person);
+  // person symbol uses stroke paths; render as filled shape
+  $$('.people svg use').forEach(u=>{u.style.fill='inherit'});
+
+  function lightBottles(){[...arr.children].forEach((d,i)=>{if(i<7)setTimeout(()=>d.classList.add('on'),150*i)})}
+  function lightPeople(){const s=[...ppl.children];s.forEach((d,i)=>{if(i<4)setTimeout(()=>d.classList.add('on'),140*i);if(i===4)setTimeout(()=>d.classList.add('half'),140*i)})}
+  function lightOne(){setTimeout(()=>ppl10.children[0].classList.add('on'),300)}
+
+  /* reveal observer */
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');
+    el.querySelectorAll('[data-count]').forEach(n=>{if(!n.dataset.done){n.dataset.done=1;countUp(n)}});
+    if(el.dataset.count&&!el.dataset.done){el.dataset.done=1;countUp(el)}
+    if(el.id==='bottles')lightBottles();
+    if(el.id==='ppl')lightPeople();
+    if(el.querySelector&&el.querySelector('#people10'))lightOne();
+    el.querySelectorAll('[data-ring]').forEach(r=>{r.querySelector('.fg').style.strokeDashoffset=314-314*(+r.dataset.ring/100)});
+    if(el.dataset.ring)el.querySelector('.fg').style.strokeDashoffset=314-314*(+el.dataset.ring/100);
+    if(el.id==='score')el.querySelectorAll('.fil').forEach(f=>f.style.width=f.dataset.w+'%');
+    if(el.id==='ck')null;
+    if(el.classList.contains('ckcol'))el.querySelectorAll('.ckitem').forEach((c,i)=>setTimeout(()=>c.classList.add('done'),400+260*i));
+    io.unobserve(el)})},{threshold:.18});
+  $$('.reveal').forEach(el=>io.observe(el));
+  $$('.statstrip [data-count]').forEach(n=>io.observe(n));
+  $$('.ring').forEach(r=>io.observe(r));
+  io.observe($('#podium'));
+
+  /* toggle grau */
+  $$('[data-toggle]').forEach(t=>t.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+    t.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+    $$('.grau').forEach(g=>g.classList.toggle('on',g.id===b.dataset.t))}));
+
+  /* segmented */
+  const segVal={};
+  $$('.seg').forEach(s=>{segVal[s.dataset.name]=s.querySelector('.on').dataset.v;
+    s.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+      s.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));segVal[s.dataset.name]=b.dataset.v;calcBR();calcUS()})});
+
+  function render(stack,leg,parts,total){
+    stack.innerHTML=parts.map(p=>`<div class="${p.c}" style="width:${Math.max(0,p.v)/total*100}%" title="${p.k}"></div>`).join('');
+    leg.innerHTML=parts.map(p=>`<div><span class="k"><i class="${p.c}"></i>${p.k}</span><b>${p.f(p.v)}</b></div>`).join('');
+  }
+
+  /* ---- Calculadora Brasil ---- */
+  const cats={beleza:[.13,2],luxo:[.14,2],saude:[.12,1]};
+  function dba(p){return p<30?4.5:p<50?6.5:6.75}
+  function calcBR(){
+    const p=+$('#brP').value,cp=+$('#brC').value/100,tp=+$('#brT').value/100,ap=+$('#brA').value/100;
+    const [r,mn]=cats[segVal.cat];
+    const com=Math.max(r*p,mn),log=dba(p),cost=cp*p,tax=tp*p,ads=ap*p,free=p-com-log-cost-tax-ads;
+    $('#brPo').textContent=brl(p);$('#brCo').textContent=pct(cp*100);$('#brTo').textContent=pct(tp*100);$('#brAo').textContent=pct(ap*100);
+    $('#brOut').textContent=brl(free);$('#brPct').textContent=pct(free/p*100)+' do preço';
+    $('#brOut').style.color=free<0?'#ff7aa8':'#fff';
+    render($('#brStack'),$('#brLeg'),[
+      {k:'Produto',v:cost,c:'c-cost',f:brl},{k:'Comissão',v:com,c:'c-com',f:brl},{k:'Entrega DBA',v:log,c:'c-log',f:brl},
+      {k:'Impostos',v:tax,c:'c-tax',f:brl},{k:'Anúncios',v:ads,c:'c-ads',f:brl},{k:'Sobra',v:Math.max(free,0),c:'c-free',f:()=>brl(free)}],p);
+    const plat=(com+log)/p*100;
+    $('#brVer').innerHTML=`<svg class="ico"><use href="#i-chart"/></svg><span>Comissão e entrega levam <b>${pct(plat)}</b> do preço. ${free<0?'Nesta combinação a venda dá prejuízo: suba o preço, monte kit ou reduza custo.':free/p<.1?'Margem apertada: qualquer devolução ou promoção zera o lucro.':'Margem saudável para começar e investir em anúncios.'}</span>`;
+  }
+  ['brP','brC','brT','brA'].forEach(id=>$('#'+id).addEventListener('input',calcBR));calcBR();
+
+  /* ---- Calculadora EUA ---- */
+  const FX=5.8,FBA=3.86,MPF=.003464;
+  function usParts(P,Cbrl,F,a,t){
+    const cost=Cbrl/FX,ref=Math.max(P<=10?.08*P:.15*P,.3),duty=t*cost+MPF*cost,ads=a*P;
+    const free=P-cost-ref-FBA-F-duty-ads;return {cost,ref,duty,ads,free};
+  }
+  function calcUS(){
+    const P=+$('#usP').value,C=+$('#usC').value,F=+$('#usF').value,a=+$('#usA').value/100,t=+segVal.tar/100;
+    $('#usPo').textContent=usd(P);$('#usCo').textContent=brl(C)+' · '+usd(C/FX);$('#usFo').textContent=usd(F);$('#usAo').textContent=pct(a*100);
+    const r=usParts(P,C,F,a,t);
+    $('#usOut').textContent=usd(r.free);$('#usPct').textContent=pct(r.free/P*100)+' do preço';
+    $('#usOut').style.color=r.free<0?'#ff7aa8':'#fff';
+    render($('#usStack'),$('#usLeg'),[
+      {k:'Produto',v:r.cost,c:'c-cost',f:usd},{k:'Comissão',v:r.ref,c:'c-com',f:usd},{k:'FBA',v:FBA,c:'c-log',f:usd},
+      {k:'Frete',v:F,c:'c-frt',f:usd},{k:'Sobretaxa',v:r.duty,c:'c-duty',f:usd},{k:'Anúncios',v:r.ads,c:'c-ads',f:usd},
+      {k:'Sobra',v:Math.max(r.free,0),c:'c-free',f:()=>usd(r.free)}],P);
+    const sc=[0,.25,.375].map(x=>usParts(P,C,F,a,x).free);
+    const mx=Math.max(...sc.map(Math.abs),.01);
+    $('#usScen').innerHTML=sc.map((v,i)=>`<div class="col"><span class="v" style="color:${v<0?'#ff7aa8':'#fff'}">${usd(v)}</span><div class="b${v<0?' neg':''}" style="height:${Math.abs(v)/mx*110}px"></div><small>${['sem sobretaxa','25%','37,5%'][i]}</small></div>`).join('');
+  }
+  ['usP','usC','usF','usA'].forEach(id=>$('#'+id).addEventListener('input',calcUS));calcUS();
+
+  /* ---- Rota ---- */
+  const stops=[
+    {t:'Fábrica no Brasil',d:'O produto sai pronto para o mercado americano.',l:['Rótulo em inglês, com ingredientes INCI e medidas em ml e oz','Fábrica registrada na FDA, com agente nos EUA','Etiquetas e embalagem no padrão FBA da Amazon']},
+    {t:'Exportação',d:'Papelada brasileira para a carga sair do país.',l:['Habilitação no Radar e Siscomex','Nota fiscal de exportação e DU-E','Despachante aduaneiro no Brasil','Receita de exportação com desoneração de tributos']},
+    {t:'Frete internacional',d:'Escolha entre velocidade e custo.',l:['Aéreo: mais rápido, bom para o lote piloto','Marítimo: mais barato por unidade, exige ISF','Perfume, esmalte e aerossol: regras de carga perigosa']},
+    {t:'Alfândega dos EUA',d:'Onde entra a sobretaxa.',l:['Importador responsável, já que a Amazon não assume esse papel','Customs bond e despachante americano','Sobretaxa de 25% a 37,5% sobre o valor declarado','Inspeção da FDA quando houver']},
+    {t:'Centro de distribuição Amazon',d:'O estoque passa a ser da operação FBA.',l:['Envio planejado no Seller Central','Tarifas de armazenagem por pé cúbico','Programa de produtos perigosos, quando aplicável']},
+    {t:'Cliente americano',d:'Entrega Prime e atendimento pela Amazon.',l:['Comissão de 8% a 15% por venda','Tarifa FBA por unidade enviada','Avaliações e Brand Registry sustentam a conversão']}
+  ];
+  const stns=$$('.stn'),det=$('#routeDetail'),fg=$('#routeFg'),plane=$('#planeG');
+  const L=fg.getTotalLength();fg.style.strokeDasharray=L;fg.style.strokeDashoffset=L;
+  const stopPos=[0,.2,.4,.6,.8,1];
+  let cur=-1,auto=true,routeOn=false,tStart=0;
+  function show(i){cur=i;stns.forEach((s,j)=>s.classList.toggle('on',j<=i));const s=stops[i];
+    det.innerHTML=`<span class="num gtext n">${i+1}</span><div><h4>${s.t}</h4><p style="color:var(--muted-d);font-size:14.5px">${s.d}</p><ul>${s.l.map(x=>'<li>'+x+'</li>').join('')}</ul></div>`}
+  const scroller=document.querySelector('.route .scroller');
+  function placeAt(frac,follow){const pt=fg.getPointAtLength(L*frac);plane.setAttribute('transform',`translate(${pt.x} ${pt.y})`);fg.style.strokeDashoffset=L*(1-frac);
+    if(follow&&scroller.scrollWidth>scroller.clientWidth+4){scroller.scrollLeft=pt.x/1000*scroller.scrollWidth-scroller.clientWidth/2}}
+  function setStop(i){placeAt(stopPos[i],false);show(i)}
+  stns.forEach(s=>s.addEventListener('click',()=>{auto=false;setStop(+s.dataset.i)}));
+  placeAt(0);show(0);
+  const CYCLE=15000;
+  function loop(t){if(!auto)return;const p=((t-tStart)%CYCLE)/CYCLE;const frac=Math.min(1,p*1.15);placeAt(frac,true);
+    const idx=stopPos.reduce((a,v,i)=>frac>=v-.001?i:a,0);if(idx!==cur)show(idx);requestAnimationFrame(loop)}
+  new IntersectionObserver(es=>{if(es[0].isIntersecting&&!routeOn){routeOn=true;tStart=performance.now();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(loop)}},{threshold:.35}).observe($('#route'));
+})();
+</script>
+</body>
+</html>
