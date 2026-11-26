@@ -297,6 +297,37 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .phase p{font-size:13.5px;color:var(--muted)}
 @media (max-width:760px){.phases{grid-template-columns:1fr 1fr;row-gap:20px}}
 
+
+/* ---------- LADDER (concorrência) ---------- */
+.ladder{background:#fff;border-radius:24px;padding:28px 28px 20px;box-shadow:var(--shadow)}
+.lad-legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);margin-bottom:18px}
+.lad-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.lad-axis,.lad-row{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:16px;align-items:center}
+.lad-row{padding:9px 0;border-bottom:1px dashed var(--line)}
+.lad-row:last-child{border:0}
+.lad-name b{display:block;font-size:14.5px;font-weight:600;line-height:1.25}
+.lad-name small{display:block;font-size:12px;color:var(--muted);line-height:1.35}
+.lad-track{position:relative;height:34px}
+.lad-band{position:absolute;top:0;bottom:0;border-radius:8px}
+.lad-dot{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);display:flex;align-items:center;gap:6px;transition:left 1.3s cubic-bezier(.2,.8,.2,1);white-space:nowrap}
+.lad-dot i{width:16px;height:16px;border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.9),0 4px 10px rgba(20,26,58,.25);flex:none}
+.lad-dot span{font-family:MuseoModerno;font-weight:700;font-size:14px;background:#fff;padding:0 4px;border-radius:6px}
+.lad-dot.flip{flex-direction:row-reverse}
+.lad-axis .ticks{position:relative;height:22px;font-size:11.5px;color:var(--muted)}
+.lad-axis .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.lad-axis .ticks span:last-child{transform:translateX(-50%)}
+@media (max-width:640px){.lad-axis .ticks span:nth-child(2),.lad-axis .ticks span:nth-child(4){display:none}}
+.lad-target{position:absolute;top:-6px;bottom:-6px;border:2px dashed var(--pink);border-radius:10px;background:rgba(233,30,140,.06)}
+.lad-tlabel{position:absolute;top:-24px;font-size:11.5px;font-weight:600;color:var(--pink);white-space:nowrap;transform:translateX(-50%)}
+.k-pdrn{background:var(--pink)}.k-cu{background:var(--blue)}.k-combo{background:var(--purple)}
+@media (max-width:640px){.lad-axis,.lad-row{grid-template-columns:1fr}.lad-axis>div:first-child{display:none}.ladder{padding:22px 18px 14px}}
+.bebars{display:grid;gap:12px;margin-top:8px}
+.be{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;align-items:center}
+.be .p{font-family:MuseoModerno;font-weight:700;font-size:17px}
+.be .bars{display:grid;gap:5px}
+.be .bar{height:22px;border-radius:7px;width:0;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:12.5px;font-weight:600;color:#fff;transition:width 1.2s cubic-bezier(.2,.8,.2,1);white-space:nowrap}
+.be .bar.t{background:var(--grad)}.be .bar.z{background:var(--lav2);color:var(--ink)}
+
 /* fixed cost list */
 .costlist{display:grid;gap:10px}
 .crow{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;background:#fff;border-radius:14px;padding:14px 18px}
@@ -379,6 +410,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
       <a href="#resumo" class="hide-m">Resumo</a>
       <a href="#brasil"><span class="hide-m">Amazon </span>Brasil</a>
       <a href="#eua"><span class="hide-m">Amazon </span>EUA</a>
+      <a href="#concorrencia" class="hide-m">Concorrência</a>
       <a href="#fontes" class="hide-m">Fontes</a>
     </div>
   </div>
@@ -912,11 +944,70 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
   </div>
 </section>
 
-<!-- 2.6 Caminho -->
-<section style="background:#fff">
+
+<!-- 2.5 Concorrência -->
+<section id="concorrencia" style="background:#fff">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker">2.5 · Como conduzimos</span>
+      <span class="kicker">2.5 · Concorrência</span>
+      <h2>Séruns de PDRN e GHK-Cu: dá para competir exportando?</h2>
+      <p>Sim, desde que o produto entre na faixa intermediária. Levantamos séruns vendidos ao consumidor americano em novembro de 2026: o mercado de massa é dominado por marcas coreanas com escala, e a sobretaxa pesa menos que a disputa por avaliações.</p>
+    </div>
+
+    <div class="ladder reveal" id="ladder">
+      <div class="lad-legend"><span><i class="k-pdrn"></i>PDRN</span><span><i class="k-cu"></i>Peptídeo de cobre (GHK-Cu)</span><span><i class="k-combo"></i>PDRN + GHK-Cu</span><span style="color:var(--pink);font-weight:600">▭ faixa sugerida para marca nova</span></div>
+      <div class="lad-axis"><div></div><div class="ticks" id="ladTicks"></div></div>
+      <div id="ladRows"></div>
+      <p class="src">Preços em US$ para 30 ml, exceto onde indicado. Amazon via relatórios de vendas (AsInsight, jun a ago/2026); demais em lojas dos EUA (Ulta, Sephora, YesStyle e sites das marcas), out a nov/2026. Preços mudam com promoções.</p>
+    </div>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card lav reveal"><span class="num bignum gtext" style="font-size:clamp(34px,4vw,48px)" data-count="80" data-suffix=" mil">0</span><p class="small" style="margin-top:8px"><b>unidades por mês</b> do sérum PDRN mais vendido, a US$ 18,90, com 20,7 mil avaliações. Brigar por preço com esse volume não faz sentido.</p></div>
+      <div class="card lav reveal d1"><span class="num bignum gtext" style="font-size:clamp(34px,4vw,48px)">US$ 24,90</span><p class="small" style="margin-top:8px">é o preço de um sérum coreano que <b>já junta PDRN e GHK-Cu</b> (1.200 ppm e 1%). É a referência mais direta para um portfólio com os dois ativos.</p></div>
+      <div class="card lav reveal d2"><span class="num bignum gtext" style="font-size:clamp(34px,4vw,48px)">7 de 16</span><p class="small" style="margin-top:8px">produtos populares de PDRN <b>não informam a quantidade</b> do ativo no anúncio americano. Declarar a concentração vira argumento de venda.</p></div>
+    </div>
+
+    <div class="grid2" style="margin-top:22px;align-items:start">
+      <div class="card reveal" id="beCard">
+        <h3 style="font-size:19px;margin-bottom:4px">Até quanto o frasco pode custar</h3>
+        <p class="small muted" style="margin-bottom:14px">Custo máximo por unidade, em reais, para sobrar 15% do preço de venda.</p>
+        <div class="bebars" id="beBars"></div>
+        <div style="display:flex;gap:16px;margin-top:14px;font-size:12.5px;color:var(--muted);flex-wrap:wrap"><span><i style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--grad);vertical-align:-1px;margin-right:6px"></i>com sobretaxa de 37,5%</span><span><i style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--lav2);vertical-align:-1px;margin-right:6px"></i>sem sobretaxa</span></div>
+        <p class="src">Premissas: comissão de 15%, FBA de US$ 3,86, frete de US$ 1,50 por unidade, anúncios de 15% no lançamento, câmbio de R$ 5,80. Não inclui custos fixos nem impostos sobre o lucro.</p>
+      </div>
+      <div class="card navy reveal d1">
+        <span class="kicker">Exemplo</span>
+        <h3 style="font-size:20px;margin:10px 0 14px">Frasco de R$ 25 vendido a US$ 29,90</h3>
+        <div style="display:flex;gap:26px;flex-wrap:wrap">
+          <div><span class="num" style="font-size:40px;color:#7ee2b8">US$ 9,63</span><p class="small" style="color:var(--muted-d)">sobra por venda, 32% do preço</p></div>
+          <div><span class="num" style="font-size:40px;color:#ffb35c">US$ 1,62</span><p class="small" style="color:var(--muted-d)">de sobretaxa por unidade</p></div>
+        </div>
+        <p class="small" style="margin-top:14px;color:var(--muted-d)">A sobretaxa é calculada sobre o custo declarado. Em sérum de custo baixo e preço alto, ela come pouco da margem. O que mais pesa é comissão, FBA e anúncios.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="font-size:20px;margin:48px 0 16px">Recomendação para uma marca nova de séruns</h3>
+    <div class="grid2">
+      <div class="costlist reveal">
+        <div class="crow"><span class="b"><svg class="ico"><use href="#i-tag"/></svg></span><div><b>Preço entre US$ 29,90 e 34,90</b><small>Na faixa das marcas intermediárias, longe da guerra de preço do mercado de massa.</small></div><span></span></div>
+        <div class="crow"><span class="b"><svg class="ico"><use href="#i-box"/></svg></span><div><b>Kit com os dois séruns</b><small>Sobe o ticket e dilui a tarifa FBA por unidade.</small></div><span></span></div>
+        <div class="crow"><span class="b"><svg class="ico"><use href="#i-label"/></svg></span><div><b>Concentração no anúncio</b><small>ppm de PDRN e % de GHK-Cu à vista, como fazem as marcas mais técnicas.</small></div><span></span></div>
+      </div>
+      <div class="costlist reveal d1">
+        <div class="crow"><span class="b"><svg class="ico"><use href="#i-star"/></svg></span><div><b>Plano de avaliações</b><small>Vine e anúncios mais fortes nos primeiros meses. Marca nova começa do zero.</small></div><span></span></div>
+        <div class="crow"><span class="b"><svg class="ico"><use href="#i-factory"/></svg></span><div><b>Fabricante na FDA</b><small>Em marca própria feita por terceiro, quem registra a fábrica é o fabricante. Ele precisa topar.</small></div><span></span></div>
+        <div class="crow"><span class="b"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Alegações de cosmético</b><small>Firmeza e renovação, sim. Promessa de tratamento transforma o produto em medicamento nos EUA.</small></div><span></span></div>
+      </div>
+    </div>
+    <div class="alert blue reveal" style="margin-top:22px"><svg class="ico"><use href="#i-doc"/></svg><div><b>Para fechar a conta de um cliente:</b> custo por frasco, lista de ingredientes com concentrações, quem fabrica e se a marca está registrada no INPI.</div></div>
+  </div>
+</section>
+
+<!-- 2.6 Caminho -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">2.6 · Como conduzimos</span>
       <h2>Quatro etapas, com decisão baseada em números</h2>
       <p>A OnMoov conduz o projeto de ponta a ponta e coordena parceiros especializados em regularização nos EUA, comércio exterior e logística internacional.</p>
     </div>
@@ -981,6 +1072,12 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
       <li><a href="https://agenciagov.ebc.com.br/noticias/202607/alcance-das-medidas-tarifarias-dos-estados-unidos-sobre-exportacoes-brasileiras" target="_blank" rel="noopener">Agência Gov: medidas tarifárias dos EUA</a></li>
       <li><a href="https://www.thomsonreuters.com.br/pt/tax-accounting/comercio-exterior/blog/tarifa-25-eua-produtos-brasileiros-comercio-exterior-2026.html" target="_blank" rel="noopener">Thomson Reuters: tarifa de 25% e decisão da Suprema Corte</a></li>
       <li><a href="https://www.diariodepernambuco.com.br/brasil/2026/11/11729819-brasil-pede-analise-de-tarifaco-a-omc-mas-eua-veta.html" target="_blank" rel="noopener">Diario de Pernambuco: pedido do Brasil na OMC (24/11/2026)</a></li>
+      <li><a href="https://www.asinsight.com/report/US/prdn-serum" target="_blank" rel="noopener">AsInsight: mais vendidos de PDRN na Amazon EUA (ago/2026)</a></li>
+      <li><a href="https://www.asinsight.com/report/US/copper-peptide-serum" target="_blank" rel="noopener">AsInsight: mais vendidos de peptídeo de cobre na Amazon EUA (jun/2026)</a></li>
+      <li><a href="https://www.evenskyn.com/zh-hans/blogs/skin-beautyarticles/best-pdrn-serums-and-creams-2026" target="_blank" rel="noopener">EvenSkyn: comparação de rótulos de PDRN (out/2026)</a></li>
+      <li><a href="https://www.yesstyle.com/en/dr-reju-all-advanced/info.html/pid.1137777912" target="_blank" rel="noopener">YesStyle: Dr.Reju-All Advanced PDRN Copper Peptide Serum</a></li>
+      <li><a href="https://www.stylekorean.com/product/dr.reju-all-advanced-pdrn-copper-peptide-serum-30ml/1782181597" target="_blank" rel="noopener">Style Korean: concentrações do Dr.Reju-All</a></li>
+      <li><a href="https://www.sephora.com/product/exo-pdrn-prismatic-serum-P525906" target="_blank" rel="noopener">Sephora: Medik8 Exo-PDRN</a></li>
     </ol>
     <div class="foot"><span>Material de apoio comercial OnMoov · valores de referência em novembro de 2026. Tarifas mudam: confirme no Seller Central antes de fechar proposta.</span><span>OnMoov · Soluções em e-commerce</span></div>
   </div>
@@ -1100,6 +1197,33 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
     $('#usScen').innerHTML=sc.map((v,i)=>`<div class="col"><span class="v" style="color:${v<0?'#ff7aa8':'#fff'}">${usd(v)}</span><div class="b${v<0?' neg':''}" style="height:${Math.abs(v)/mx*110}px"></div><small>${['sem sobretaxa','25%','37,5%'][i]}</small></div>`).join('');
   }
   ['usP','usC','usF','usA'].forEach(id=>$('#'+id).addEventListener('input',calcUS));calcUS();
+
+
+  /* ---- Escada de preços ---- */
+  const LMAX=110;
+  const prods=[
+    {n:'Good Molecules Copper + PDRN',d:'PDRN vegetal, ativo sem quantidade',p:12,k:'combo'},
+    {n:'BIODANCE Caviar PDRN',d:'15 ml',p:15.99,k:'pdrn'},
+    {n:'Medicube PDRN Pink Peptide',d:'nº 1 em vendas · 4,6★ (20,7 mil)',p:18.90,k:'pdrn'},
+    {n:'Dr.Reju-All PDRN + Copper',d:'1.200 ppm PDRN + 1% cobre · de US$ 38',p:24.90,k:'combo'},
+    {n:'Anua PDRN Capsule 100',d:'site da marca',p:30,k:'pdrn'},
+    {n:'The Ordinary Multi-Peptide + Copper 1%',d:'~20 mil unidades/mês na Amazon',p:32,k:'cu'},
+    {n:'REJURAN Dual Effect Ampoule',d:'5.000 ppm de c-PDRN',p:55,k:'pdrn'},
+    {n:'Medik8 Exo-PDRN',d:'premium, Sephora',p:96,k:'pdrn'}
+  ];
+  const fmt=v=>'US$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const pctL=v=>(v/LMAX*100);
+  const bands=`<div class="lad-band" style="left:${pctL(10)}%;width:${pctL(15)}%;background:rgba(124,48,171,.05)"></div><div class="lad-band" style="left:${pctL(25)}%;width:${pctL(15)}%;background:rgba(124,48,171,.10)"></div><div class="lad-band" style="left:${pctL(40)}%;width:${pctL(70)}%;background:rgba(124,48,171,.05)"></div>`;
+  $('#ladTicks').innerHTML=[0,25,50,75,100].map(v=>`<span style="left:${pctL(v)}%">US$ ${v}</span>`).join('');
+  $('#ladRows').innerHTML=prods.map((x,i)=>`<div class="lad-row"><div class="lad-name"><b>${x.n}</b><small>${x.d}</small></div><div class="lad-track">${bands}<div class="lad-target" style="left:${pctL(29.9)}%;width:${pctL(5)}%;border-top:0;border-bottom:0;border-radius:0;top:-10px;bottom:-10px"></div><div class="lad-dot${x.p>80?' flip':''}" data-x="${pctL(x.p)}"><i class="k-${x.k}"></i><span>${fmt(x.p)}</span></div></div></div>`).join('');
+  const beData=[[24.9,35.1,48.2],[29.9,46.6,64.1],[34.9,58.2,80.0],[39.9,69.8,95.9]];
+  const beMax=100;
+  $('#beBars').innerHTML=beData.map(r=>`<div class="be"><span class="p">${fmt(r[0])}</span><div class="bars"><div class="bar t" data-w="${r[1]/beMax*100}">R$ ${Math.round(r[1])}</div><div class="bar z" data-w="${r[2]/beMax*100}">R$ ${Math.round(r[2])}</div></div></div>`).join('');
+  const io2=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return;
+    e.target.querySelectorAll('.lad-dot').forEach((d,i)=>setTimeout(()=>d.style.left=d.dataset.x+'%',120*i));
+    e.target.querySelectorAll('.be .bar').forEach((b,i)=>setTimeout(()=>b.style.width=b.dataset.w+'%',100*i));
+    io2.unobserve(e.target)})},{threshold:.2});
+  io2.observe($('#ladder'));io2.observe($('#beCard'));
 
   /* ---- Rota ---- */
   const stops=[
